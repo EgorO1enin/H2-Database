@@ -1,9 +1,9 @@
-package com.example.Lesson2;
+package com.example.Lesson2.adress;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-interface PersonRepository extends JpaRepository<Person, Long> {
-
+public interface AdressRepository extends JpaRepository<Adress, Long> {
 }
