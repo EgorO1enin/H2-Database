@@ -37,7 +37,7 @@ public class Person implements Serializable {
     @Length(min = 8, max = 20, message = "Password must be between 8 and 20 characters")
     private String password;
 
-    private Long money;
+    private Long money = 0L;
 
 
     @OneToMany
