@@ -104,6 +104,7 @@ public class Controller {
         personRepository.deleteById(id);
     }
 
+
     //Удаление всех пользователей
     @Operation(
             summary = "Удаление всех пользователей из базы данных"
@@ -172,11 +173,9 @@ public class Controller {
     public String putMoney (@RequestParam("money") Long money, @RequestParam("user") Long userId){
         Person person = personRepository.getReferenceById(userId);
         person.setMoney(person.getMoney() + money);
-        return "Баланс пополнен на " + money;
+        personRepository.save(person);
+        return STR."Баланс пополнен на \{money} рублей";
     }
-
-
-
 }
 
 
